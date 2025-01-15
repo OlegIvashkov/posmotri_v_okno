@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -39,11 +42,6 @@ ol {
 
 fieldset {
   border: none;
-}
-
-.page {
-  display: flex;
-  justify-content: center;
 }
 
 .content {
@@ -107,7 +105,7 @@ fieldset {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;  
-  padding: 1px; 
+  outline-offset: 2px;
 }
 
 .search-form__textfield {
@@ -144,13 +142,14 @@ fieldset {
   margin-right: 5px;  
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after { 
-    content: url(../images/white_square.svg);
+    content: '';
     width: 15px;
     height: 15px;
-    background-color: rgba(27, 25, 25, 1);  
+    background-color: white;   
   }
 
 .search-form__checkbox-list > .search-form__label:hover {
@@ -180,20 +179,21 @@ fieldset {
   text-decoration: underline;
 }
 
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+} 
+
 .search-form__submit-button {
   min-width: 194px;  
   align-self: flex-end;
 }
 
-.search-form__submit-button:focus-visible {
-  border: none;
-  outline: 2px double white;  
-} 
-
 .content__list {
   height: 299px;  
   overflow-y: auto;  
   position: relative;
+  padding: 2px;
 }
 
 .content__list-item {
@@ -267,12 +267,6 @@ fieldset {
 .more-button {
   width: 399px;
 }
-
-.more-button:focus-visible {
-  border: none;
-  outline: 2px double white;  
-  margin: 2px;
-} 
 
 .visually-hidden {
   position: absolute;
